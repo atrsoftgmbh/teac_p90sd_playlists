@@ -1,0 +1,58 @@
+format playlist.
+
+name ist xxx.ppl (endung ppl , schreibung klein ... vermutlich playlist auf japanisch ... )
+
+text file windows utf8 (cr lf !!)
+
+prefix binary 3 bytes...
+ef bb bf
+
+sonderzeichen  escape utf 8
+ä c3a4
+ö c3b6
+ü c3bc
+ß c39f
+
+
+felder mit , getrennt
+
+feld 1
+string, delimited mit "
+value : pfad zum titel
+im player C:\ ; dann pfad in dos format # beachrte grosses C
+
+feld 2
+zahl
+value 2 (kanal ? )
+
+feld 3
+string, delimited mit "
+value title
+
+feld 4
+string, delimited mit "
+artist
+
+feld 5
+zahl
+value länge stück in sektoren, siehe info aus ribs ..
+
+feld 6
+zahl
+value rest sektoren, siehe info aus ribs
+
+feld 7
+zahl
+value vermutlich letzter benutzter index in titel, also länge - rest - 1
+
+achtung:
+1. maximal 100 playliast in version 1.30
+
+2. rescan erfroderlich sonst wird liste nciht erkannt nahc neueinstllen
+
+3. liste kann mehrere alben umfassen (also relax wegen 100, das sind grob 48 gb album alleine ... )
+
+4. länge in anzeige beschränkt
+
+5. alpahbetic order beim einlesen (a bis p aktuell also .. )
+
